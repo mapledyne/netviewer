@@ -7,7 +7,14 @@ import sys
 # Force output to be unbuffered
 sys.stdout = open(sys.stdout.fileno(), mode=sys.stdout.mode, buffering=1)
 
-print("Starting NetViewer application...", flush=True)
+try:
+    from netviewer import __version__
+    print(
+        f"Starting NetViewer application (version {__version__})...",
+        flush=True
+    )
+except ImportError:
+    print("Starting NetViewer application...", flush=True)
 
 try:
     from netviewer.app import main

@@ -1,5 +1,8 @@
 """
-NetViewer - A network visualization tool using diagnostics
+NetViewer - A network visualization tool
 """
 
-__version__ = "0.1.0" 
+try:
+    from ._version import version as __version__
+except ImportError:
+    __version__ = "unknown" 
