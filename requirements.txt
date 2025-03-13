@@ -1,0 +1,5 @@
+diagnostics
+pytest>=7.0.0
+black>=22.0.0
+PySide6>=6.5.0
+setuptools_scm>=7.0.0 
